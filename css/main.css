@@ -78,6 +78,7 @@ h5 span,
 h6 span,
 h7 span {}
 /* CSS GERAL */
+.container{position: relative;}
 
 .fleft{ float: left; }
 .fright{ float: right; }
@@ -111,9 +112,95 @@ h7 span {}
     background: radial-gradient(#ffdf5d, #ffdb23); /* Standard syntax */
     width: 100%;
     padding: 100px 0;
+    min-height: 100vh;
 } 
-.camadas{ margin-bottom: 20px;}
-.col-infos{ margin-top: 300px;}
+.potatos{
+    position: absolute;
+    background: url('../img/sprite-batatas.png') no-repeat;
+    transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
+}
+#element1{
+    width: 315px;
+    height: 273px;
+    position: absolute;
+    top: -54px;
+    left: -215px;
+}
+#element2{
+    width: 160px;
+    height: 135px;
+    position: absolute;
+    top: 314px;
+    left: -127px;
+    background-position: -101px -343px;
+}
+#element3{
+    width: 79px;
+    height: 200px;
+    position: absolute;
+    top: 490px;
+    left: -172px;
+    background-position: -49px -513px;
+}
+#element4{
+    width: 162px;
+    height: 474px;
+    position: absolute;
+    top: 790px;
+    left: -147px;
+    background-position: -79px -763px;
+}
+#element5{
+    width: 702px;
+    height: 284px;
+    position: absolute;
+    top: -54px;
+    right: -107px;
+    background-position: -401px -20px;
+}
+#element6{
+    width: 234px;
+    height: 250px;
+    position: absolute;
+    top: 639px;
+    right: -80px;
+    background-position: -809px -393px;
+}
+#element7{
+    width: 190px;
+    height: 250px;
+    position: absolute;
+    bottom: 320px;
+    right: 300px;
+    background-position: -465px -487px;
+}
+#element8{
+    width: 100px;
+    height: 230px;
+    position: absolute;
+    bottom: -47px;
+    right: 70px;
+    background-position: -802px -756px;
+}
+
+.camadas{ 
+    margin-bottom: 20px; 
+    position: relative;
+    top: auto;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+#col-infos{ margin-top: 300px;}
+
+#layer1.in-view{ transform: translateY(220px); z-index:7;}
+#layer2.in-view{ transform: translateY(110px); z-index:6;}
+#layer3.in-view{ transform: translateY(36px); z-index:5;}
+#layer4.in-view{ transform: translateY(-40px); z-index:4;}
+#layer5.in-view{ transform: translateY(-164px); z-index:3;}
+#layer6.in-view{ transform: translateY(-300px); z-index:2;}
+#layer7.in-view{ transform: translateY(-430px); z-index:1;}
 
 .sec-tit{
     font-size: 113px;
