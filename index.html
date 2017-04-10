@@ -31,11 +31,11 @@
 <header class="header">
 <nav class="navegacao container">
     <ul class="menu">
-        <li class="menu-item fleft"><a href="#" title="Promoções" class="menu-link">Promoções</a></li>
-        <li class="menu-item fleft"><a href="#" title="Quem Somos" class="menu-link">Quem Somos</a></li>
-        <li class="menu-item fleft"><a href="#" title="Página Inicial" class="logo"><img src="img/logo.png" class="img-responsive center-block"/></a></li>
-        <li class="menu-item fleft"><a href="#" title="Cardápio" class="menu-link">Cardápio</a></li>
-        <li class="menu-item fleft"><a href="#" title="Localização" class="menu-link">Localização</a></li>
+        <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('promocoes')" title="Promoções" class="menu-link">Promoções</a></li>
+        <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('sobre')" title="Quem Somos" class="menu-link">Quem Somos</a></li>
+        <li class="menu-item fleft"><a href="/" title="Página Inicial" class="logo"><img src="img/logo.png" class="img-responsive center-block"/></a></li>
+        <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('cardapio')" title="Cardápio" class="menu-link">Cardápio</a></li>
+        <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('localizacao')" title="Localização" class="menu-link">Localização</a></li>
     </ul>
 </nav>
 </header>
@@ -74,7 +74,7 @@
 </article>
 </section>
 	
-<section class="sobre">
+<section id="sobre" class="sobre sec-height">
 <article class="container cf">
 	<div class="row">
 		<div class="col-md-6 img-sobre">
@@ -90,7 +90,7 @@
 </article>
 </section>
 
-<section class="produtos">
+<section id="promocoes" class="produtos sec-height">
 <article class="container cf">
     <h2 class="prod-tit"><small class="white">Nossas</small><br/><strong class="red">DELÍCIAS</strong></h2>
 
@@ -134,7 +134,7 @@
 </article>
 </section>
 	
-<section class="adicional">
+<section class="adicional sec-height">
 <article class="container cf">
 	<div class="col-left col-md-5">
 		<h2 class="adicional-tit fleft"><small class="yellow">Manda um</small><br/><strong class="red">adicional</strong></h2>
@@ -183,11 +183,18 @@
 	</div>
     
     <img src="img/texto-adicional.jpg" class="img-responsive fright">
+    
+    <div id="bandeja"><div id="element-bandeja"></div></div>
 </article>
 </section>
 	
-<section class="lanches">
+<section id="cardapio" class="lanches sec-height">
 <article class="container cf">
+    <div id="itens1" class="ingredientes"></div>
+    <div id="itens2" class="ingredientes"></div>
+    <div id="itens3" class="ingredientes"></div>
+    <div id="itens4" class="ingredientes"></div>
+   
     <h2 class="lanches-tit"><small class="yellow">Lanches em</small><br/><strong class="red">pão integral</strong></h2>
     
 	<div class="col-md-7 nopadd">
@@ -217,12 +224,15 @@
 </article>
 </section>
 	
-<section class="petiscos">
+<section class="petiscos sec-height">
 <article class="container cf">
+    <div id="figure1" class="figures"></div>
+    <div id="figure2" class="figures"></div>
+    
     <h2 class="petiscos-tit"><small class="white">Degust</small><br/><strong class="yellow">petiscos</strong></h2>
     
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
         <ul class="petiscos-list cf">
             <li class="petiscos-item col-md-6 nopadd">
                 <strong class="petisco-title">Batata</strong>
@@ -249,17 +259,17 @@
             </li> 
         </ul>    
         </div>
-        <div class="col-md-7"><img src="img/petiscos.png" class="img-responsive center-block"></div>
+        <div class="col-md-6"><img src="img/petiscos.png" class="img-responsive center-block"></div>
     </div>
 </article>
 </section>
 	
-<section class="bebidas">
+<section class="bebidas sec-height">
 <article class="container cf">
     <h2 class="bebidas-tit"><small class="white">Nossas</small><br/><strong class="red">Bebidas</strong></h2>
     
     <div class="row">
-        <div class="col-md-6">    
+        <div class="col-md-7">    
             <div class="row">
                 <div class="col-md-6">
                     <strong class="list-title">Sucos</strong>
@@ -274,7 +284,39 @@
                         <li class="bebidas-item">Morango</li>
                         <li class="bebidas-item">Uva</li>		
                     </ul>
+                </div>
+                   
+                <div class="col-md-6 infos-qtd">
+                    <div class="blc-qtd">
+                        <span class="qtd-ml">400ml</span>
+                        <div class="qtd-preco">
+                            <strong><small>R$</small><br/>5,50</strong>
+                            <span>Normal</span> 
+                            <small class="info-sabor">qualquer sabor</small>   
+                        </div>
+                        <div class="qtd-preco">
+                            <strong><small>R$</small><br/>6,00</strong>
+                            <span>Ao leite</span> 
+                            <small class="info-sabor">qualquer sabor</small>   
+                        </div>
+                    </div>
+                       
+                    <div class="blc-qtd">
+                        <span class="qtd-ml">500ml</span>
+                        <div class="qtd-preco">
+                            <strong><small>R$</small><br/>6,50</strong>
+                            <span>Normal</span> 
+                            <small class="info-sabor">qualquer sabor</small>   
+                        </div>
+                        <div class="qtd-preco">
+                            <strong><small>R$</small><br/>7,00</strong>
+                            <span>Ao leite</span> 
+                            <small class="info-sabor">qualquer sabor</small>   
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6">
                     <ul class="bebidas-list">
                         <li class="bebidas-item">Refrigerante</li>
                         <li class="bebidas-item">Lata: R$4,50</li>
@@ -287,8 +329,8 @@
                         <li class="bebidas-item">Água: R$2,50</li>
                     </ul>
                 </div>
-
-                <div class="col-md-6">
+                
+                <div class="col-md-6">    
                     <strong class="list-title">Cervejas</strong>
                     <ul class="bebidas-list">
                         <li class="bebidas-item">Heineken R$ 6,00</li>
@@ -300,12 +342,12 @@
             </div>
         </div>
     
-        <div class="col-md-6"><img src="img/bebidas.png" class="img-responsive center-block"></div>
+        <div class="col-md-5"><img src="img/bebidas.png" class="img-responsive center-block"></div>
     </div>
 </article>
 </section>
 	
-<section class="sobremesas">
+<section class="sobremesas sec-height">
 <article class="container cf">
     <h2 class="sobremesas-tit"><small class="white">Nossas</small><br/><strong class="yellow">sobremesas</strong></h2>
     
@@ -340,7 +382,7 @@
 </article>
 </section>
 	
-<footer class="footer">
+<footer id="localizacao" class="footer sec-height">
 <article class="container cf">
 	<div class="row">
 		
