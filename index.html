@@ -273,7 +273,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <strong class="list-title">Sucos</strong>
-                    <ul class="bebidas-list">
+                    <ul id="sucos" class="bebidas-list">
                         <li class="bebidas-item">Abacaxi</li>
                         <li class="bebidas-item">Abacaxi c/ hortelã</li>
                         <li class="bebidas-item">Acerola</li>
@@ -330,7 +330,7 @@
                     </ul>
                 </div>
                 
-                <div class="col-md-6">    
+                <div class="col-md-6 bebidas-mrtop">    
                     <strong class="list-title">Cervejas</strong>
                     <ul class="bebidas-list">
                         <li class="bebidas-item">Heineken R$ 6,00</li>
@@ -383,52 +383,68 @@
 </section>
 	
 <footer id="localizacao" class="footer sec-height">
-<article class="container cf">
-	<div class="row">
-		
-		<aside class="footer-inf col-md-3">
-		<h2 class="footer-tit">
-			<p class="footer-tit_text1">ONDE</p>
-			<p class="footer-tit_text2">ESTAMOS</p>
-		</h2>
-			<adress class="footer-end">
-			<p class="footer-end_text">Rua Àpia 222, Vila de Penha</p>
-			<p class="footer-end_text">Rio de Janeiro, RJ</p>
-			</adress>
-			<h3 class="footer-day">
-				<p class="footer-day_text">ABRIMOS TODOS OS DIAS<br/> DE 18H À 00H</p>
-			</h3>
-			<ul class="footer-inf_media">
-				<li class="footer-media_item">
-					<p class="footer-media_text">DELIVERY</p>
-					<p class="footer-media_text">18H À 00H</p>
-				</li>
-				<li class="footer-media_item">
-					<p class="footer-media_text">3042 3558</p>
-					<p class="footer-media_text">3042 3566</p>
-				</li>
-				<li class="footer-media_item">
-					<p class="footer-media_text">98152 2540</p>
-					<p class="footer-media_text">FAÇA SEU PEDIDO PELO WHATSAPP</p>
-				</li>
-				<li class="footer-media_item">
-					<p class="footer-media_text">FACEBOOK.COM</p>
-					<p class="footer-media_text">/DEGUSTVP</p>
-				</li>
-				<li class="footer-media_item">
-					<p class="footer-media_text">INSTAGRAM</p>
-					<p class="footer-media_text">@DEGUST</p>
-				</li>
-			</ul>
-		</aside>
-	</div>
-</article>
+    <article class="container cf">
+        <div class="row">
+
+            <aside class="footer-inf col-md-5">
+            <h2 class="footer-tit">
+                <p class="footer-tit_text1">ONDE</p>
+                <p class="footer-tit_text2">ESTAMOS</p>
+            </h2>
+                <adress class="footer-end">
+                <p class="footer-end_text">Rua Àpia 222, Vila de Penha</p>
+                <p class="footer-end_text">Rio de Janeiro, RJ</p>
+                </adress>
+                <h3 class="footer-day">
+                    <p class="footer-day_text">ABRIMOS TODOS OS DIAS<br/> DE 18H À 00H</p>
+                </h3>
+                <ul class="footer-inf_media">
+                    <li class="footer-media_item">
+                        <p class="footer-media_text">DELIVERY</p>
+                        <p class="footer-media_text">18H À 00H</p>
+                    </li>
+                    <li class="footer-media_item">
+                        <p class="footer-media_text">3042 3558</p>
+                        <p class="footer-media_text">3042 3566</p>
+                    </li>
+                    <li class="footer-media_item">
+                        <p class="footer-media_text">98152 2540</p>
+                        <p class="footer-media_text">FAÇA SEU PEDIDO PELO WHATSAPP</p>
+                    </li>
+                    <li class="footer-media_item">
+                        <p class="footer-media_text">FACEBOOK.COM</p>
+                        <p class="footer-media_text">/DEGUSTVP</p>
+                    </li>
+                    <li class="footer-media_item">
+                        <p class="footer-media_text">INSTAGRAM</p>
+                        <p class="footer-media_text">@DEGUST</p>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </article>
+    <div id="map"></div>
 </footer>
 
     <!-- js -->
     <script src="js/jquery.min.js"></script> 
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script> 
+    <script>
+      function initMap() {
+        var uluru = {lat: -22.8456515, lng: -43.3008831};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 19,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqBZVMjjUhoky8cjbsBR9jYnyLVx9gnls&callback=initMap"></script>
 </body>
 
 </html>

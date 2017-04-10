@@ -266,8 +266,10 @@ h7 span {}
 
 .produtos{
 	width: 100%;
+    height: 100vh;
 	background: url('../img/bg3.jpg') no-repeat 0 0;
 	background-size: cover;
+    margin-bottom: 200px;
 }
 .prod-tit{ line-height: normal; margin: 90px 0 40px 0;}
 .prod-tit .white{
@@ -539,6 +541,31 @@ h7 span {}
     font: 65px 'gotham ultra',sans-serif;
     text-transform: uppercase;
 }
+#sucos{ position: relative;}
+#sucos::before {
+    content: "";
+    position: absolute;
+    top: 98px;
+    right: -22px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #3d0b04;
+}
+#sucos::after {
+    content: "";
+    position: absolute;
+    top: 218px;
+    right: -22px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #3d0b04;
+}
 .list-title{
     color: #3d0b04;
     font: 30px 'gotham ultra',sans-serif;
@@ -597,7 +624,7 @@ h7 span {}
     font: bold 11px 'gotham medium',sans-serif;
     text-transform: uppercase;
 }
-
+.bebidas-mrtop{ margin-top: 90px;}
 
 
 .sobremesas{ background: #be2aee; padding: 80px 0;}
@@ -641,10 +668,15 @@ h7 span {}
 
 .footer {
 	background: #fac200;
+    position: relative;
 }
 
 .footer-inf {
 	float: left;
+    background: #fac200;
+    position: relative;
+    z-index: 5;
+    padding-bottom: 90px;
 }
 
 .footer-tit {
@@ -657,7 +689,7 @@ h7 span {}
 	padding: 0;
 	font-family: 'gotham light';
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 46px;
 	color: #ffffff;
 }
 
@@ -665,7 +697,7 @@ h7 span {}
 	margin: 0;
 	padding: 0;
 	font-family: 'gotham ultra';
-	font-size: 36px;
+	font-size: 56px;
 	color: #3d0b04;
 }
 
@@ -678,15 +710,14 @@ h7 span {}
 .footer-end_text {
 	margin: 0;
 	padding: 0;
-	font-family: 'gotham medium';
-	font-weight: 900;
-	font-size: 17px;
+    color: #3d0b04;
+	font: 23px 'gotham ultra',sans-serif;
 }
 
 .footer-day {
 	display: inline-block;
 	background: #3f1a08;
-	margin: 10px 0;
+	margin: 30px 0;
 	padding: 15px;
 }
 
@@ -695,21 +726,43 @@ h7 span {}
 	font-family: 'gotham medium';
 	margin: 0;
 	padding: 0;
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: 900;
 }
 
 .footer-inf_media {}
 
 .footer-media_item {
-	margin: 10px 0;
-  padding: 5px 0;
+    padding: 0 0 0 50px;
+    margin-bottom: 25px;
+    color: #3d0b04;
+    position: relative;
 }
+.footer-media_item::before{
+    content: '';
+    background: url(../img/rdp-icons.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.footer-media_item:nth-child(2)::before{ background-position: 0 -68px;}
+.footer-media_item:nth-child(3)::before{ background-position: 0 -132px;}
+.footer-media_item:nth-child(4)::before{ background-position: 0 -201px;}
+.footer-media_item:nth-child(5)::before{ background-position: 0 -268px;}
 
 .footer-media_text {
-	font-family: 'gotham medium';
 	margin: 0;
 	padding: 0;
-	font-size: 13px;
-  font-weight: 900;
+	font: bold 18px 'gotham medium',sans-serif;
+}
+
+
+#map{ 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 100%;
 }
