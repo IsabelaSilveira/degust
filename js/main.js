@@ -5,6 +5,11 @@ function goToByScroll(id){
     });
 };
 jQuery(document).ready(function($){
+    $('.sec-item').click(function(){
+        $('.sec-item').removeClass('active');
+        $(this).addClass('active');
+    });
+    
     
     var larg = $('.painel').width();
     
@@ -48,6 +53,20 @@ jQuery(document).ready(function($){
     });
 
     
+    $("#prod-list").owlCarousel({
+        dots : false,
+        nav: true,
+        items : 1,
+        loop: true,
+        responsiveClass: true,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items:1,
+            }
+        }
+    });
+    
     $("#prateleira").owlCarousel({
         dots : false,
         nav: true,
@@ -89,12 +108,12 @@ jQuery(document).ready(function($){
         if(mPosX <= wLarg/2){
             $('#itens1').css({'top':itens1.top - 15});
             $('#itens2').css({'left':itens2.left + 20});
-            $('#itens3').css({'top':itens3.top + 0});
+            $('#itens3').css({'left':itens3.left + 20});
             $('#itens4').css({'top':itens4.top + 5});   
         }else{
             $('#itens1').css({'top':itens1.top + 15});
             $('#itens2').css({'left':itens2.left - 20});
-            $('#itens3').css({'top':itens3.top + 25});
+            $('#itens3').css({'left':itens3.left - 20});
             $('#itens4').css({'top':itens4.top - 5});
         }
         
@@ -103,8 +122,8 @@ jQuery(document).ready(function($){
     //movimento dos itens
     var pLarg = $('.petiscos').width();
     
-    var itens1 = $('#figure1').position();
-    var itens2 = $('#figure2').position();
+    var fig1 = $('#figure1').position();
+    var fig2 = $('#figure2').position();
  
     $('.petiscos').mousemove(function(){
         
@@ -112,11 +131,38 @@ jQuery(document).ready(function($){
         var mPosY = event.pageY;
         
         if(mPosX <= pLarg/2){
-            $('#figure1').css({'top':itens1.top - 15});
-            $('#figure2').css({'left':itens2.left + 20}); 
+            $('#figure1').css({'top':fig1.top - 15});
+            $('#figure2').css({'left':fig2.left + 20}); 
         }else{
-            $('#figure1').css({'top':itens1.top + 15});
-            $('#figure2').css({'left':itens2.left - 20});
+            $('#figure1').css({'top':fig1.top + 15});
+            $('#figure2').css({'left':fig2.left - 20});
+        }
+        
+    });
+    
+    //movimento dos itens
+    var pLarg = $('.sobremesas').width();
+    
+    var sobr1 = $('#banana1').position();
+    var sobr2 = $('#banana2').position();
+    var sobr3 = $('#banana3').position();
+    var sobr4 = $('#morango1').position();
+ 
+    $('.sobremesas').mousemove(function(){
+        
+        var mPosX = event.pageX;
+        var mPosY = event.pageY;
+        
+        if(mPosX <= pLarg/2){
+            $('#banana1').css({'top':sobr1.top + 15});
+            $('#banana2').css({'left':sobr2.left - 20});
+            $('#banana3').css({'left':sobr3.left + 15});
+            $('#morango1').css({'top':sobr4.top - 20}); 
+        }else{
+            $('#banana1').css({'top':sobr1.top - 15});
+            $('#banana2').css({'left':sobr2.left + 20});
+            $('#banana3').css({'left':sobr3.left - 15});
+            $('#morango1').css({'top':sobr4.top + 20}); 
         }
         
     });
@@ -126,15 +172,21 @@ var posElement = $('#col-infos').offset().top - 250;
 var altElement = $('#col-infos').height() + 250;
 var totalElement = posElement+altElement;
 
-var posSobre = $('.sobre').offset().top;
+var posSobre = $('.sobre').offset().top - 200;
 var altSobre = $('.sobre').height();
 var totalSobre = posSobre+altSobre;
 
-var posAdd = $('.adicional').offset().top - 150;
+var posProd = $('.produtos').offset().top - 200;
+var altProd = $('.produtos').height();
+var totalProd = posProd+altProd;
+
+var posAdd = $('.adicional').offset().top - 200;
 var altAdd = $('.adicional').height();
 var totalAdd = posAdd+altAdd;
 
-console.log(posAdd);
+var posBebidas = $('.bebidas').offset().top - 300;
+var altBebidas = $('.bebidas').height();
+var totalBebidas = posBebidas+altBebidas;
 
 var winScroll;
 jQuery(window).scroll(function(){
@@ -149,12 +201,36 @@ jQuery(window).scroll(function(){
     
     if( winScroll >= posSobre && winScroll <= totalSobre){
         $('.img-sobre').addClass('animated fadeIn');
+        $('.txt-sobre').addClass('animated slideInDown');
+    }
+    if(winScroll < posSobre){
+        $('.txt-sobre').hide();   
+    }else{ 
+        $('.txt-sobre').show(); 
+    }
+    
+    if( winScroll >= posProd && winScroll <= totalProd){
+        $('.prod-tit').addClass('animated slideInLeft');
+    }
+    if(winScroll < posProd){
+        $('.prod-tit').css('opacity', '0');   
+    }else{ 
+        $('.prod-tit').css('opacity', '1'); 
     }
     
     if( winScroll >= posAdd && winScroll <= totalAdd){
         $('#bandeja').addClass('animated slideInUp').show();
     }else if(winScroll < posAdd){
         $('#bandeja').hide();        
+    }
+    
+    if( winScroll >= posBebidas && winScroll <= totalBebidas){
+        $('.bebidas-tit').addClass('animated slideInLeft');
+    }
+    if(winScroll < posBebidas){
+        $('.bebidas-tit').css('opacity', '0');   
+    }else{ 
+        $('.bebidas-tit').css('opacity', '1'); 
     }
 
 });

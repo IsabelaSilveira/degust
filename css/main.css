@@ -2,7 +2,12 @@
 *, html, body {padding: 0; margin: 0; outline: none;}
 *, *:after, *:before {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 html, body{ height: 100%;}
-body { font-weight:normal; font-size: 14px; font-family: 'Fauna One', serif; height: 100%; color: #333; text-align: left; background: #fff;}
+body {
+    height: 100%; 
+    text-align: left; 
+    background: #fff;
+    overflow-x: hidden;
+}
 
 a{text-decoration:none; color: #656565;}
 
@@ -89,6 +94,8 @@ h7 span {}
     background-color: #630f18; 
     height: 90px;
     width: 100%;
+    position: relative;
+    z-index: 15;
 }
 .menu-item{ width: 17.5%; position: relative; display: block;}
 .menu-item:nth-child(3){ width: 30%; height: 90px; }
@@ -239,6 +246,35 @@ h7 span {}
     padding: 0;
     text-transform: uppercase;
 }
+.sec-navigation{
+    background: #630f18;
+    width: 225px;
+    height: 55px;
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    border-radius: 20px;
+    padding: 0 11px;
+    position: absolute;
+    right: -180px;
+    top: 170px;
+}
+.sec-item{
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    text-indent: -9999px;
+    margin: 15px 7px;
+}
+.sec-item.active{ background: #fd560c; }
+.sec-item.active .sec-link{ box-shadow: inset 0px 0px 0 8px #ffdd38; }
+.sec-link{
+    display: block;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0px 0px 0 13px #ffdd38;
+    border-radius: 100%;
+}
 
 .sobre{
 	width: 100%;
@@ -270,10 +306,8 @@ h7 span {}
 
 .produtos{
 	width: 100%;
-    height: 100vh;
 	background: url('../img/bg3.jpg') no-repeat 0 0;
 	background-size: cover;
-    margin-bottom: 200px;
 }
 .prod-tit{ line-height: normal; margin: 90px 0 40px 0;}
 .prod-tit .white{
@@ -301,6 +335,54 @@ h7 span {}
     text-transform: uppercase;
     display: block;
     line-height: 22px;
+}
+
+#prod-list{ position: relative; padding: 0 50px;}
+#prod-list .owl-prev, 
+#prod-list .owl-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -37px!important;
+    width: 59px;
+    height: 74px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+#prod-list .owl-prev:hover, 
+#prod-list .owl-next:hover{ opacity: .7;}
+#prod-list .owl-prev {
+    left: 0;
+    background: url('../img/sprite.png') no-repeat -10px 0px;
+}
+#prod-list .owl-next {
+    right: 0;
+    background: url('../img/sprite.png') no-repeat -82px 0px;
+}
+
+#prateleira{ position: relative; padding: 0 20px;}
+#prateleira .owl-prev, 
+#prateleira .owl-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -37px!important;
+    width: 59px;
+    height: 74px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+#prateleira .owl-prev:hover, 
+#prateleira .owl-next:hover{ opacity: .7;}
+#prateleira .owl-prev {
+    left: -40px;
+    background: url('../img/sprite.png') no-repeat -8px -84px;
+}
+#prateleira .owl-next {
+    right: -40px;
+    background: url('../img/sprite.png') no-repeat -86px -84px;
 }
 
 .prat-item{ 
@@ -632,6 +714,7 @@ h7 span {}
 
 
 .sobremesas{ background: #be2aee; padding: 80px 0;}
+.sobremesas .container{ position: relative;}
 .sobremesas-tit .white{
     font: 32px 'gotham medium',sans-serif;
     color: white;
@@ -666,6 +749,46 @@ h7 span {}
     font: bold 18px 'gotham medium',sans-serif;
 }
 .sobremesa-tit.mr-top{ margin-top: 30px; }
+
+.sobremesas-item{
+    position: absolute;
+    background: url('../img/sprite-secoes.png') -27px -759px no-repeat;
+    transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
+}
+#banana1{
+    width: 132px;
+    height: 130px;
+    position: absolute;
+    right: 220px;
+    top: -25px;
+}
+#banana2{
+    width: 115px;
+    height: 70px;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    background-position: -309px -961px;
+}
+#banana3{
+    width: 90px;
+    height: 89px;
+    position: absolute;
+    right: 190px;
+    bottom: 70px;
+    background-position: -45px -930px;
+}
+#morango1{
+    width: 132px;
+    height: 187px;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    background-position: -313px -754px;
+}
+
 
 
 /*estilo do footer*/
