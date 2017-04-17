@@ -12,7 +12,6 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-		<link href="css/mobile.css" rel="stylesheet" type="text/css">
     <link href="css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css">
@@ -29,12 +28,12 @@
 </head>
  
 <body>
-<header class="header">
+<header id="header" class="header">
 <nav class="navegacao container">
     <ul class="menu">
         <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('promocoes')" title="Promoções" class="menu-link">Promoções</a></li>
         <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('sobre')" title="Quem Somos" class="menu-link">Quem Somos</a></li>
-        <li class="menu-item fleft"><a href="/" title="Página Inicial" class="logo"><img src="img/logo.png" class="img-responsive center-block"/></a></li>
+        <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('header')" title="Página Inicial" class="logo"><img src="img/logo.png" class="img-responsive center-block"/></a></li>
         <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('cardapio')" title="Cardápio" class="menu-link">Cardápio</a></li>
         <li class="menu-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('localizacao')" title="Localização" class="menu-link">Localização</a></li>
     </ul>
@@ -63,10 +62,10 @@
 		</span>
 	<nav class="navegacao-mobile">
     <ul class="m-mobile">
-        <li class="m-mobile_item"><a href="#" title="Promoções" class="m-mobile_link">Promoções</a></li>
-        <li class="m-mobile_item"><a href="#" title="Quem Somos" class="m-mobile_link">Quem Somos</a></li>
-        <li class="m-mobile_item"><a href="#" title="Cardápio" class="m-mobile_link">Cardápio</a></li>
-        <li class="m-mobile_item"><a href="#" title="Localização" class="m-mobile_link">Localização</a></li>
+        <li class="m-mobile_item"><a href="javascript:void(0)" onclick="goToByScroll('promocoes')" title="Promoções" class="m-mobile_link">Promoções</a></li>
+        <li class="m-mobile_item"><a href="javascript:void(0)" onclick="goToByScroll('sobre')" title="Quem Somos" class="m-mobile_link">Quem Somos</a></li>
+        <li class="m-mobile_item"><a href="javascript:void(0)" onclick="goToByScroll('cardapio')" title="Cardápio" class="m-mobile_link">Cardápio</a></li>
+        <li class="m-mobile_item"><a href="javascript:void(0)" onclick="goToByScroll('localizacao')" title="Localização" class="m-mobile_link">Localização</a></li>
     </ul>
 	</nav>
 	</div>
@@ -103,22 +102,21 @@
         <p class="txt">O cuidado que temos com você vai desde a escolha dos nossos ingredientes até o lanche chegar quentinho na sua casa</p>
         <a href="#" title="Estou com fome" class="btn">Estou com fome!</a>
     
-    
-        <nav class="sec-navigation">
-            <ul class="sec-menu">
-                <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('sobre')" title="Quem Somos" class="sec-link">1</a></li>
-                <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('promocoes')" title="Promoções" class="sec-link">2</a></li>
-                <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('adicional')" title="Adicionais" class="sec-link">3</a></li>
-                <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('cardapio')" title="Cardápio" class="sec-link">4</a></li>
-                <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('petiscos')" title="Pestiscos" class="sec-link">5</a></li>
-            </ul>    
-        </nav>
-    
     </div>
     
     </div>
 </article>
 </section>
+
+<nav class="sec-navigation">
+    <ul class="sec-menu">
+        <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('sobre')" title="Quem Somos" class="sec-link">1</a></li>
+        <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('promocoes')" title="Promoções" class="sec-link">2</a></li>
+        <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('adicional')" title="Adicionais" class="sec-link">3</a></li>
+        <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('cardapio')" title="Cardápio" class="sec-link">4</a></li>
+        <li class="sec-item fleft"><a href="javascript:void(0)" onclick="goToByScroll('petiscos')" title="Pestiscos" class="sec-link">5</a></li>
+    </ul>    
+</nav>
 	
 <section id="sobre" class="sobre sec-height">
 <article class="container cf">
@@ -507,7 +505,6 @@
     <script src="js/jquery.min.js"></script> 
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-		<script src="js/click.js"></script>
     <script>
       function initMap() {
         var uluru = {lat: -22.8456515, lng: -43.3008831};

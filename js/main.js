@@ -5,6 +5,11 @@ function goToByScroll(id){
     });
 };
 jQuery(document).ready(function($){
+    $('.menu-anchor').on('click touchstart', function(e){
+        $('.bloco-menu_mobile').toggleClass('menu-active');
+        e.preventDefault();
+    });
+    
     $('.sec-item').click(function(){
         $('.sec-item').removeClass('active');
         $(this).addClass('active');
@@ -77,9 +82,7 @@ jQuery(document).ready(function($){
         responsive : {
             // breakpoint from 0 up
             0 : {
-                items:2,
-                dots:true,
-                slideBy:2
+                items:1
             },
             768 : {
                 items:3
