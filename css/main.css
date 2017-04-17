@@ -378,11 +378,11 @@ h7 span {}
 #prateleira .owl-prev:hover, 
 #prateleira .owl-next:hover{ opacity: .7;}
 #prateleira .owl-prev {
-    left: -40px;
+    left: -11px;
     background: url('../img/sprite.png') no-repeat -8px -84px;
 }
 #prateleira .owl-next {
-    right: -40px;
+    right: -11px;
     background: url('../img/sprite.png') no-repeat -86px -84px;
 }
 
@@ -902,18 +902,29 @@ h7 span {}
 
 @media only screen and (max-width : 768px) {
 	
+
+	.img-logo {
+		max-width: 90px;
+	}
 	
 	.header{
 		display: none;
 	}
-    .header-mobile,
-    .bloco-menu_mobile{ display: block; }
-	
-/*	menu-mobile*/
 	
 	.header-mobile {
 		background: #630f18;
 		padding: 15px 0;
+	}
+	
+/*	menu-mobile */
+	
+   .header-mobile,
+   .bloco-menu_mobile{ display: block; }
+	
+	.navegacao-mobile{
+		background: #630f18;
+		width: 80%;
+		height: 100%;
 	}
 	
 	.menu-anchor{
@@ -932,12 +943,6 @@ h7 span {}
 	
 	.menu-anchor_bullet .middle {
 		    margin: 6px 0 6px 5px;
-	}
-	
-	.navegacao-mobile{
-		background: #630f18;
-		width: 80%;
-		height: 100%;
 	}
 	
 	.bloco-menu_mobile {
@@ -976,9 +981,6 @@ h7 span {}
         margin: 11px 0px;
 	}
 	
-	.img-logo {
-		max-width: 90px;
-	}
 	
 	.m-mobile_link{
 		display: block;
@@ -996,6 +998,17 @@ h7 span {}
 		background: #FFF;
         color: #d55401;
 	}
+	
+/*	fim do menu para versão mobile*/
+	
+	.sec-navigation,
+	.sanduiche,
+	.potatos,
+	.ingredientes,
+	.figures {
+		display: none;
+	}
+	
 	
 	
 
@@ -1067,19 +1080,20 @@ h7 span {}
     }
     .prod-name{
         color: #ffcc00;
-        font: 6rem 'gotham ultra',sans-serif;
+        font: 4.5rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
         margin-bottom: 55px;
     }
     .prod-price{
-        color: #3d0d05;
-        font: 9.5rem 'gotham ultra',sans-serif;
+        color: #fff;
+        font: 8.5rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
         line-height: normal;
+				text-align: center;
     }
     .prod-price .white{
-        color: white;
-        font: 3rem 'gotham ultra',sans-serif;
+        color: #fff;
+        font: 2.6rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
         display: block;
         line-height: 22px;
@@ -1094,8 +1108,7 @@ h7 span {}
     #prateleira .prod-img{ width: auto; padding-top: 65px; }
     .prod-title{
         color: #4f2222;
-        font: 1.6rem 'gotham medium',sans-serif;
-        text-transform: uppercase;
+        font: 1.7rem 'gotham medium',sans-serif;
         margin: 20px 0;
         text-transform: uppercase;
         text-align: center;
