@@ -671,7 +671,7 @@ h7 span {}
 }
 .bebidas-item:last-child{ margin-bottom: 0;}
 
-.infos-qtd{ margin: 50px 0 30px;}
+.infos-qtd{ margin: 50px 0 30px; float: left;}
 .blc-qtd{ 
     border-bottom: 1px solid #3d0b04;
     width: 100%;
@@ -1002,10 +1002,10 @@ h7 span {}
 /*	fim do menu para versão mobile*/
 	
 	.sec-navigation,
-	.sanduiche,
 	.potatos,
 	.ingredientes,
-	.figures {
+	.figures,
+    .sobremesas-item {
 		display: none;
 	}
 	
@@ -1016,7 +1016,7 @@ h7 span {}
 /*	Degust com vontade */
 	
 	.sec-tit{
-        font-size: 8.3rem;
+        font-size: 6.3rem;
         font-family: 'gotham ultra',sans-serif;
         color: #fd560c;
         line-height: 60px;
@@ -1051,12 +1051,12 @@ h7 span {}
     .txt-sobre{ margin-top: 60px; }
     .sobre-tit{ line-height: normal; margin-bottom: 50px;}
     .sobre-tit .white{
-        font-size: 7.3rem;
+        font-size: 6.3rem;
         font-family: 'king basil',cursive;
         color: white;
     }
     .sobre-tit .red{
-        font-size: 7.3rem;
+        font-size: 6.3rem;
         font-family: 'gotham ultra',sans-serif;
     }
     .sub-tit{
@@ -1072,24 +1072,24 @@ h7 span {}
     /*	Seção nossas delicias - produtos */
 
     .prod-tit .white{
-        font: 7.3rem 'king basil',cursive;
+        font: 6.3rem 'king basil',cursive;
         color: white;
     }
     .prod-tit .red{
-        font: 7.3rem 'gotham ultra',sans-serif;
+        font: 5.3rem 'gotham ultra',sans-serif;
     }
     .prod-name{
         color: #ffcc00;
-        font: 4.5rem 'gotham ultra',sans-serif;
+        font: 3.5rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
         margin-bottom: 55px;
     }
     .prod-price{
         color: #fff;
-        font: 8.5rem 'gotham ultra',sans-serif;
+        font: 6.5rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
         line-height: normal;
-				text-align: center;
+        text-align: center;
     }
     .prod-price .white{
         color: #fff;
@@ -1130,13 +1130,13 @@ h7 span {}
             display: none;
         }
     .adicional-tit .yellow{
-        font-size: 5.6rem;
+        font-size: 5.5rem;
         font-family: 'king basil',cursive;
         color: #f7c320;
     }
     .adicional-tit .red{
         color: #3d0b04;
-        font-size: 6rem;
+        font-size: 5rem;
         font-family: 'gotham ultra',sans-serif;
         text-transform: uppercase;
     }
@@ -1174,12 +1174,12 @@ h7 span {}
     /*	Lanches em pão integral */
 
     .lanches-tit .yellow{
-        font: 5.4rem 'gotham medium',sans-serif;
+        font: 5rem 'gotham medium',sans-serif;
         color: #f7c320;
     }
     .lanches-tit .red{
         color: #3d0b04;
-        font: 6rem 'gotham ultra',sans-serif;
+        font: 5rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
     }
     .lanches-list{ margin: 80px 0;}
@@ -1207,12 +1207,12 @@ h7 span {}
 
         .petiscos-tit{ margin-bottom: 50px;}
     .petiscos-tit .white{
-        font: 5.5ren 'gotham medium',sans-serif;
+        font: 5rem 'gotham medium',sans-serif;
         color: white;
     }
     .petiscos-tit .yellow{
         color: #f7c320;
-        font: 6rem 'gotham ultra',sans-serif;
+        font: 5rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
     }
     .petiscos-list{
@@ -1267,13 +1267,13 @@ h7 span {}
     /*	Nossas bebidas */
 
     .sobremesas-tit .white{
-        font: 3.2rem 'gotham medium',sans-serif;
+        font: 3rem 'gotham medium',sans-serif;
         color: white;
         text-transform: uppercase;
     }
     .sobremesas-tit .yellow{
         color: #f7c320;
-        font: 5rem 'gotham ultra',sans-serif;
+        font: 4rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
     }
     .sobremesas .list-title{
