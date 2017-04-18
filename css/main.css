@@ -1014,7 +1014,7 @@ h7 span {}
 
 	
 /*	Degust com vontade */
-	
+    #col-infos{ margin-top: 50px;}
 	.sec-tit{
         font-size: 6.3rem;
         font-family: 'gotham ultra',sans-serif;
@@ -1071,6 +1071,9 @@ h7 span {}
 	
     /*	Seção nossas delicias - produtos */
 
+    #prod-list .owl-prev{ left: -15px; }
+    #prod-list .owl-next{ right: -15px; }
+    
     .prod-tit .white{
         font: 6.3rem 'king basil',cursive;
         color: white;
@@ -1125,9 +1128,10 @@ h7 span {}
     }
 
     /*	inicio seção adicionais */
-
-    .adicional.hidden-m::before{    
-            display: none;
+    .adicional{ padding-top: 20px;}
+    .adicional.hidden-m::before,
+    #adicional #bandeja{    
+            display: none!important;
         }
     .adicional-tit .yellow{
         font-size: 5.5rem;
@@ -1140,7 +1144,7 @@ h7 span {}
         font-family: 'gotham ultra',sans-serif;
         text-transform: uppercase;
     }
-    .ad-list{ margin: 55px 0 250px;}
+    .ad-list{ margin: 55px 0 80px;}
     .ad-option{ margin-bottom: 5px; position: relative; }
     .ad-option::before{
         position: absolute;
@@ -1158,6 +1162,7 @@ h7 span {}
         background: white;
         position: relative;
         padding: 5px;
+        max-width: 50%;
     }
     .ad-price{
         position: relative;
@@ -1171,15 +1176,16 @@ h7 span {}
         text-transform: uppercase;
         text-align: center;
     }
+    .marg-bottom{ margin-bottom: 170px;}
     /*	Lanches em pão integral */
 
     .lanches-tit .yellow{
-        font: 5rem 'gotham medium',sans-serif;
+        font: 4rem 'gotham medium',sans-serif;
         color: #f7c320;
     }
     .lanches-tit .red{
         color: #3d0b04;
-        font: 5rem 'gotham ultra',sans-serif;
+        font: 4rem 'gotham ultra',sans-serif;
         text-transform: uppercase;
     }
     .lanches-list{ margin: 80px 0;}
@@ -1256,13 +1262,16 @@ h7 span {}
     }
     .bebidas-list{
         border: 2px solid #3d0b04;
-        margin-bottom: 35px;
+        margin-bottom: 0;
         padding: 25px 20px;
     }
     .bebidas-item{
         color: white;
         font: bold 2.3rem 'gotham medium',sans-serif;
     }
+    .bebidas-col{ float: left; width: 100%; margin: 0 0 30px;}
+    #sucos::before,
+    #sucos::after{ display: none;}
 
     /*	Nossas bebidas */
 
@@ -1302,8 +1311,13 @@ h7 span {}
     .sobremesa-tit.mr-top{ margin-top: 30px; }
 
     /*	onde estamos */
-
-        .footer-tit_text1 {
+    .footer{ padding-bottom: 250px;}
+    #map{
+        width: 100%;
+        height: 250px;
+    }
+    .footer-inf{padding-bottom: 20px}
+    .footer-tit_text1 {
         margin: 0;
         padding: 0;
         font-family: 'gotham light';

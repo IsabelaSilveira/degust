@@ -195,47 +195,47 @@ var winScroll;
 jQuery(window).scroll(function(){
     
     winScroll = $(window).scrollTop();
-    
-    if( winScroll >= posElement && winScroll <= totalElement){
-        $('.camadas').addClass('in-view');
-    }else{
-        $('.camadas').removeClass('in-view');
-    }
-    
-    if( winScroll >= posSobre && winScroll <= totalSobre){
-        $('.img-sobre').addClass('animated fadeIn');
-        $('.txt-sobre').addClass('animated slideInDown');
-    }
-    if(winScroll < posSobre){
-        $('.txt-sobre').hide();   
-    }else{ 
-        $('.txt-sobre').show(); 
-    }
-    
-    if( winScroll >= posProd && winScroll <= totalProd){
-        $('.prod-tit').addClass('animated slideInLeft');
-    }
-    if(winScroll < posProd){
-        $('.prod-tit').css('opacity', '0');   
-    }else{ 
-        $('.prod-tit').css('opacity', '1'); 
-    }
-    
-    if( winScroll >= posAdd && winScroll <= totalAdd){
-        $('#bandeja').addClass('animated slideInUp').show();
-    }else if(winScroll < posAdd){
-        $('#bandeja').hide();        
-    }
-    
-    if( winScroll >= posBebidas && winScroll <= totalBebidas){
-        $('.bebidas-tit').addClass('animated slideInLeft');
-    }
-    if(winScroll < posBebidas){
-        $('.bebidas-tit').css('opacity', '0');   
-    }else{ 
-        $('.bebidas-tit').css('opacity', '1'); 
-    }
+    if( jQuery(window).width() > 768 ){
+        if( winScroll >= posElement && winScroll <= totalElement){
+            $('.camadas').addClass('in-view');
+        }else{
+            $('.camadas').removeClass('in-view');
+        }
 
+        if( winScroll >= posSobre && winScroll <= totalSobre){
+            $('.img-sobre').addClass('animated fadeIn');
+            $('.txt-sobre').addClass('animated slideInDown');
+        }
+        if(winScroll < posSobre){
+            $('.txt-sobre').hide();   
+        }else{ 
+            $('.txt-sobre').show(); 
+        }
+
+        if( winScroll >= posProd && winScroll <= totalProd){
+            $('.prod-tit').addClass('animated slideInLeft');
+        }
+        if(winScroll < posProd){
+            $('.prod-tit').css('opacity', '0');   
+        }else{ 
+            $('.prod-tit').css('opacity', '1'); 
+        }
+
+        if( winScroll >= posAdd && winScroll <= totalAdd){
+            $('#bandeja').addClass('animated slideInUp').show();
+        }else if(winScroll < posAdd){
+            $('#bandeja').hide();        
+        }
+
+        if( winScroll >= posBebidas && winScroll <= totalBebidas){
+            $('.bebidas-tit').addClass('animated slideInLeft');
+        }
+        if(winScroll < posBebidas){
+            $('.bebidas-tit').css('opacity', '0');   
+        }else{ 
+            $('.bebidas-tit').css('opacity', '1'); 
+        }
+    }
 });
 
 function initMap() {
